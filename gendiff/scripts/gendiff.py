@@ -2,9 +2,10 @@
 from gendiff.cli import parse
 
 
-args = parse()
+# args = parse()
 
 def main():
+    args = parse()
     print(args)
 
 
