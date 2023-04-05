@@ -1,6 +1,7 @@
 __pycache__
 dist/
 *.pyc
-.venv/
+.venv
 .pytest_cache/
 .vim
+.setup.cfg
