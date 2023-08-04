@@ -9,3 +9,4 @@ gendiff/__pycache__/
 gendiff/scripts/__pycache__/
 env/
 .venv/
+/.venv/
