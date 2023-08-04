@@ -1,7 +1,0 @@
-# created by virtualenv automatically
-__pycache__
-dist/
-*.pyc
-.venv/
-.pytest_cache/
-.vim
