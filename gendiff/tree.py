@@ -49,6 +49,6 @@ def get_dict_value(value):
     if isinstance(value, dict):
         result = []
         for k, v in value.items():
-            result.append(create_nonchanged_node(k, v))
+            result.append(build_nonchanged_node(k, v))
         return result
     return value
