@@ -42,6 +42,8 @@ options:
   -f FORMAT, --format FORMAT
                         set format of output (default: stylish).
                         Formats: {stylish, plain, json}.
+```
+
 
 
 ### Examples
