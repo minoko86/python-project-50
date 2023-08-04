@@ -3,6 +3,7 @@ name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["CvilevAS"]
+repository = "https://github.com/minoko86/python-project-50"
 readme = "README.md"
 packages = [{include = "gendiff"}]
 
@@ -21,3 +22,9 @@ pytest = "^7.2.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.xml]
+output = "coverage.xml"
