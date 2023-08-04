@@ -10,3 +10,4 @@ gendiff/scripts/__pycache__/
 env/
 .venv/
 .coverage
+__init__.py
