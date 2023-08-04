@@ -1,4 +1,4 @@
-#!/home/minoko/python-project-50/.venv/bin/python
+#!/home/minoko/python-project-50/.venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys

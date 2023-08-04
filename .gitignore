@@ -5,3 +5,6 @@ dist/
 .pytest_cache/
 .vim
 .setup.cfg
+gendiff/__pycache__/
+gendiff/scripts/__pycache__/
+env/
