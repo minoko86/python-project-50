@@ -28,3 +28,8 @@ show_missing = true
 
 [tool.coverage.xml]
 output = "coverage.xml"
+
+[tool.coverage.run]
+branch = true
+source = ["python-project-50"]
+command_line = "poetry run pytest --cov=gendiff --cov-report xml tests/"
