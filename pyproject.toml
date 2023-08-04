@@ -31,5 +31,5 @@ output = "coverage.xml"
 
 [tool.coverage.run]
 branch = true
-source = ["python-project-50"]
+source = ["gendiff"]
 command_line = "poetry run pytest --cov=gendiff --cov-report xml tests/"
