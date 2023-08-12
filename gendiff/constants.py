@@ -1,0 +1,4 @@
+ADDED = '+'
+REMOVED = '-'
+NONCHANGED = ' '
+UPDATED = '-+'
