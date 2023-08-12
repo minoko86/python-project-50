@@ -1,5 +1,5 @@
 from gendiff.constants import ADDED, REMOVED, NONCHANGED, UPDATED
-# from gendiff.scripts.gendiff import get_dictionary_from_file
+
 import json
 import yaml
 

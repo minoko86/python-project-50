@@ -23,7 +23,6 @@ def string_of_item(item, inset):
         return f'  {s} {k}: {v}\n'
 
 
-
 def get_value_string(value, inset=0):
     if isinstance(value, list):
         return stringify(value, inset + 1)
