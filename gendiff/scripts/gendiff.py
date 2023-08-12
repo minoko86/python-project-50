@@ -1,12 +1,19 @@
 #!/usr/bin/env python3#!/usr/bin/env python3
 
-from gendiff import generate_diff
-from gendiff.cli import cli
+from gendiff.generate_diff import generate_diff
+import argparse
 
 
 def main():
-    first_file, second_file, format = cli()
-    diff = generate_diff(first_file, second_file, format)
+    parser = argparse.ArgumentParser(description='Compares two configuration '
+                                     ' files and shows a difference.')
+    parser.add_argument('first_file', type=str)
+    parser.add_argument('second_file', type=str)
+    parser.add_argument('-f', '--format',
+                        type=str, help='set format of output',
+                        default='stylish')
+    args = parser.parse_args()
+    diff = generate_diff(args.first_file, args.second_file, args.format)
     print(diff)
 
 
