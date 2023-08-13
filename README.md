@@ -51,28 +51,28 @@ options:
 
 Use of help argument:
 
-[![asciicast](https://asciinema.org/a/OJ6zXEDoEHunXM8D83wG00KfK.svg)](https://asciinema.org/a/OJ6zXEDoEHunXM8D83wG00KfK)
+[![asciicast](https://asciinema.org/a/nWQATrNwIGmSzEVqVJMGgQUcQ.svg)](https://asciinema.org/a/nWQATrNwIGmSzEVqVJMGgQUcQ)
 
 Comparison of 2 .json files:
 
-[![asciicast](https://asciinema.org/a/UMZwU0XyzQNxT9dAHb8AEp3gB.svg)](https://asciinema.org/a/UMZwU0XyzQNxT9dAHb8AEp3gB)
+[![asciicast](https://asciinema.org/a/ETboE5y9Zl7A2CnDd7WAFgTzH.svg)](https://asciinema.org/a/ETboE5y9Zl7A2CnDd7WAFgTzH)
  
 Comparison of 2 .yml files:
 
-[![asciicast](https://asciinema.org/a/7tkUHi8KtTW7LMvXL160QSINc.svg)](https://asciinema.org/a/7tkUHi8KtTW7LMvXL160QSINc)
+[![asciicast](https://asciinema.org/a/6Is27QFhVCNbrctXFfadDfSv6.svg)](https://asciinema.org/a/6Is27QFhVCNbrctXFfadDfSv6)
 
 Comparison of 2 complex .yml files:
 
-[![asciicast](https://asciinema.org/a/EVM8vIIhMjBFed4HgxEUHzOyk.svg)](https://asciinema.org/a/EVM8vIIhMjBFed4HgxEUHzOyk)
+[![asciicast](https://asciinema.org/a/8aG56hz4nnb0wzrYvGIlvkSiQ.svg)](https://asciinema.org/a/8aG56hz4nnb0wzrYvGIlvkSiQ)
 
 Comparison of 2 complex .json files:
 
-[![asciicast](https://asciinema.org/a/kVfvMjkoAZ3WBnOtgUP4f3lLb.svg)](https://asciinema.org/a/kVfvMjkoAZ3WBnOtgUP4f3lLb)
+[![asciicast](https://asciinema.org/a/aNUgSAtY3Lzahz9M78pxz6S7V.svg)](https://asciinema.org/a/aNUgSAtY3Lzahz9M78pxz6S7V)
 
 Comparison in "plain" format (2 complex .json files):
 
-[![asciicast](https://asciinema.org/a/4GHPyWopHeX2g87Pp2dYih55v.svg)](https://asciinema.org/a/4GHPyWopHeX2g87Pp2dYih55v)
+[![asciicast](https://asciinema.org/a/K2ZTVBUnkCc1E8jVhAHeOHN2x.svg)](https://asciinema.org/a/K2ZTVBUnkCc1E8jVhAHeOHN2x)
 
 Comparison in "json" format (2 complex .json files):
 
-[![asciicast](https://asciinema.org/a/ItCcgGC62qTQzk8gntxt9ZmGf.svg)](https://asciinema.org/a/ItCcgGC62qTQzk8gntxt9ZmGf)
+[![asciicast](https://asciinema.org/a/HUDXJireV1kpIsGkg4DR0jqb0.svg)](https://asciinema.org/a/HUDXJireV1kpIsGkg4DR0jqb0)
