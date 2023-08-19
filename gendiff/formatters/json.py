@@ -1,5 +1,5 @@
 import json
 
 
-def stringify(lst):
-    return json.dumps(lst, indent=4)
+def format(tree):
+    return json.dumps(tree, indent=2)

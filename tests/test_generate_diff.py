@@ -40,8 +40,8 @@ def received_files(request):
             "plain"
         ),
         (
-            'tree1.json',
-            'tree2.json',
+            'file1.yml',
+            'file2.yml',
             "json_result.json",
             "json"
         ),

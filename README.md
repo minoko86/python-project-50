@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/minoko86/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/minoko86/python-project-50/actions)
-[![Actions Status](https://github.com/minoko86/python-project-50/actions/workflows/pyci.yml/badge.svg)](https://github.com/minoko86/python-project-50/actions)
+[![Actions Status](https://github.com/minoko86/python-project-50/actions/workflows/code_climate_check.yml/badge.svg)](https://github.com/minoko86/python-project-50/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4e2029c2c6047573d995/maintainability)](https://codeclimate.com/github/minoko86/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4e2029c2c6047573d995/test_coverage)](https://codeclimate.com/github/minoko86/python-project-50/test_coverage)
 
@@ -73,6 +73,6 @@ Comparison in "plain" format (2 complex .json files):
 
 [![asciicast](https://asciinema.org/a/K2ZTVBUnkCc1E8jVhAHeOHN2x.svg)](https://asciinema.org/a/K2ZTVBUnkCc1E8jVhAHeOHN2x)
 
-Comparison in "json" format (2 complex .json files):
+Comparison in "json" format (2 complex .yml files):
 
-[![asciicast](https://asciinema.org/a/HUDXJireV1kpIsGkg4DR0jqb0.svg)](https://asciinema.org/a/HUDXJireV1kpIsGkg4DR0jqb0)
+[![asciicast](https://asciinema.org/a/YeG1x8wXzcbG1bHqrngduBkPn.svg)](https://asciinema.org/a/YeG1x8wXzcbG1bHqrngduBkPn)

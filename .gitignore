@@ -7,6 +7,7 @@ dist/
 .setup.cfg
 gendiff/__pycache__/
 gendiff/scripts/__pycache__/
+gendiff/formatters/__pycache__/
 env/
 .venv/
 .coverage
