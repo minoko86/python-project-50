@@ -23,13 +23,13 @@ def format(tree, path=[]):
         if type_node is DELETED:
             output.append(TEMPLATE_REMOVED.format('.'.join(path)))
         elif type_node is ADDED:
-            output.append(TEMPLATE_ADDED.format('.'.join(path),
-                                                get_space_of_string(second_value)))
+            output.append(TEMPLATE_ADDED.format
+                          ('.'.join(path), get_space_of_string(second_value)))
 
         elif type_node is CHANGED:
-            output.append(TEMPLATE_UPDATED.format('.'.join(path),
-                                                  get_space_of_string(first_value),
-                                                  get_space_of_string(second_value)))
+            output.append(TEMPLATE_UPDATED.format
+                          ('.'.join(path), get_space_of_string(first_value),
+                           get_space_of_string(second_value)))
         elif type_node is NESTED:
             output.append(format(complex, path))
         path.pop()
