@@ -30,3 +30,7 @@ jobs:
         with:
           coverageCommand: make test-coverage
           debug: true
+      - name: Run linter
+        run: make lint
+      - name: Run pytest
+        run: make test

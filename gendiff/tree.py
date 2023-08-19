@@ -5,11 +5,11 @@ import yaml
 
 
 def get_dictionary_from_file(file_path):
-    o = open(file_path)
-    if file_path[-4:] == 'json':
-        return json.load(o)
-    if file_path[-4:] == 'yaml' or file_path[-3:] == 'yml':
-        return yaml.safe_load(o)
+    with open(file_path) as o:
+        if file_path[-4:] == 'json':
+            return json.load(o)
+        if file_path[-4:] == 'yaml' or file_path[-3:] == 'yml':
+            return yaml.safe_load(o)
 
 
 def build_added_node(key, value):
