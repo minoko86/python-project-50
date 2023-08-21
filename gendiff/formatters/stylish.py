@@ -11,12 +11,12 @@ SPACE = ' '
 TEMPLATE_STYLISH = '{0}{1} {2}: {3}'
 
 
-def format(tree, depth=1):
+def make_format(node, depth=1):
     output = ['{']
     start_space = get_space(depth).get('start')
     end_space = get_space(depth).get('end')
 
-    for item in tree:
+    for item in node:
         type_node = item.get('type')
         key = item.get('key')
         first_value = item.get('first_value')
@@ -41,7 +41,7 @@ def format(tree, depth=1):
         elif type_node is NESTED:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, NOCHANGE, key,
-                format(complex, depth + 1)
+                make_format(complex, depth + 1)
             ))
         else:
             output.append(TEMPLATE_STYLISH.format(

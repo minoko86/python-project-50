@@ -1,15 +1,15 @@
 from gendiff.formatters import stylish, plain, json
 
 
-def formatting(format):
+def formatting(make_format):
 
-    INFERENCE_FORMATS = {
-        'stylish': stylish.format,
-        'plain': plain.format,
-        'json': json.format
+    FORMATS = {
+        'stylish': stylish.make_format,
+        'plain': plain.make_format,
+        'json': json.make_format
     }
 
-    output_format = INFERENCE_FORMATS.get(format)
+    output_format = FORMATS.get(make_format)
 
     if not output_format:
         raise ValueError('The format is not supported')

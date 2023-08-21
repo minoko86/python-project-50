@@ -1,5 +1,5 @@
 import json
 
 
-def format(tree):
-    return json.dumps(tree, indent=2)
+def make_format(node):
+    return json.dumps(node, indent=2)

@@ -9,9 +9,9 @@ TEMPLATE_REMOVED = "Property '{0}' was removed"
 TEMPLATE_UPDATED = "Property '{0}' was updated. From {1} to {2}"
 
 
-def format(tree, path=[]):
+def make_format(node, path=[]):
     output = []
-    for item in tree:
+    for item in node:
         type_node = item.get('type')
         key = item.get('key')
         first_value = item.get('first_value')
@@ -31,7 +31,7 @@ def format(tree, path=[]):
                           ('.'.join(path), get_space_of_string(first_value),
                            get_space_of_string(second_value)))
         elif type_node is NESTED:
-            output.append(format(complex, path))
+            output.append(make_format(complex, path))
         path.pop()
 
     return '\n'.join(output)
