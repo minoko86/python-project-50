@@ -1,7 +1,7 @@
 
 import json
 
-from gendiff.constants import DELETED, ADDED, NESTED, CHANGED
+from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 
 
 TEMPLATE_ADDED = "Property '{0}' was added with value: {1}"

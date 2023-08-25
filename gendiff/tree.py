@@ -1,4 +1,8 @@
-from gendiff.constants import ADDED, NESTED, CHANGED, UNCHANGED, DELETED
+DELETED = 'deleted'
+ADDED = 'added'
+UNCHANGED = 'unchanged'
+CHANGED = 'changed'
+NESTED = 'nested'
 
 
 def build_diff(data1, data2):

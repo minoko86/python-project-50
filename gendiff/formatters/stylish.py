@@ -1,6 +1,6 @@
 import json
 
-from gendiff.constants import DELETED, ADDED, NESTED, UNCHANGED
+from gendiff.tree import DELETED, ADDED, NESTED, UNCHANGED
 
 
 NEW = '+'
