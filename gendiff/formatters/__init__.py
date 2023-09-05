@@ -14,3 +14,4 @@ def get_format(make_format):
     if not output_format:
         raise ValueError('The format is not supported')
     return output_format
+
