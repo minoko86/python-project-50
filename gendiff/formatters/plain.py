@@ -24,12 +24,12 @@ def make_format(node, path=[]):
             output.append(TEMPLATE_REMOVED.format('.'.join(path)))
         elif type_node is ADDED:
             output.append(TEMPLATE_ADDED.format
-                          ('.'.join(path), get_space_of_string(second_value)))
+                          ('.'.join(path), get_string(second_value)))
 
         elif type_node is CHANGED:
             output.append(TEMPLATE_UPDATED.format
-                          ('.'.join(path), get_space_of_string(first_value),
-                           get_space_of_string(second_value)))
+                          ('.'.join(path), get_string(first_value),
+                           get_string(second_value)))
         elif type_node is NESTED:
             output.append(make_format(complex, path))
         path.pop()
@@ -37,7 +37,7 @@ def make_format(node, path=[]):
     return '\n'.join(output)
 
 
-def get_space_of_string(value):
+def get_string(value):
     if isinstance(value, str):
         result = f"'{value}'"
     elif isinstance(value, dict):
