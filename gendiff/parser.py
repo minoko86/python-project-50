@@ -3,7 +3,7 @@ import yaml
 import os
 
 
-def open_the_file(file_path):
+def load_file(file_path):
     with open(file_path, 'r') as file:
         data = file.read()
         extension = os.path.splitext(file_path)[1]

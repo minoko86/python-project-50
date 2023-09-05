@@ -1,7 +1,7 @@
 from gendiff.formatters import stylish, plain, json
 
 
-def get_format(make_format):
+def get_formatter(make_format):
 
     FORMATS = {
         'stylish': stylish.make_format,
