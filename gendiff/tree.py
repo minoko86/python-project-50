@@ -5,13 +5,13 @@ CHANGED = 'changed'
 NESTED = 'nested'
 
 
-def make_entry(type, key, first_value='', second_value=''):
+def make_entry(type, key, first_value='', second_value='', nested=''):
     return {
         'type': type,
         'key': key,
         'first_value': first_value,
         'second_value': second_value,
-        # 'nested': nested,
+        'nested': nested,
     }
 
 
