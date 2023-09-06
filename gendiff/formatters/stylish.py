@@ -26,17 +26,17 @@ def make_format(node, depth=1):
         if type_node is DELETED:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, OLD, key,
-                get_space_of_string(first_value, depth + 1)
+                get_string(first_value, depth + 1)
             ))
         elif type_node is ADDED:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, NEW, key,
-                get_space_of_string(second_value, depth + 1)
+                get_string(second_value, depth + 1)
             ))
         elif type_node is UNCHANGED:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, NOCHANGE, key,
-                get_space_of_string(first_value, depth + 1)
+                get_string(first_value, depth + 1)
             ))
         elif type_node is NESTED:
             output.append(TEMPLATE_STYLISH.format(
@@ -46,11 +46,11 @@ def make_format(node, depth=1):
         else:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, OLD, key,
-                get_space_of_string(first_value, depth + 1)
+                get_string(first_value, depth + 1)
             ))
             output.append(TEMPLATE_STYLISH.format(
                 start_space, NEW, key,
-                get_space_of_string(second_value, depth + 1)
+                get_string(second_value, depth + 1)
             ))
 
     output.append(end_space + '}')
@@ -63,7 +63,7 @@ def get_space(depth):
     return space
 
 
-def get_space_of_string(value, depth):
+def get_string(value, depth):
     result = []
     start_space = get_space(depth).get('start')
     end_space = get_space(depth).get('end')
@@ -73,7 +73,7 @@ def get_space_of_string(value, depth):
         for key, leaf_value in value.items():
             result.append(TEMPLATE_STYLISH.format(
                 start_space, NOCHANGE,
-                key, get_space_of_string(leaf_value, depth + 1)
+                key, get_string(leaf_value, depth + 1)
             ))
 
         result.append(end_space + '}')
