@@ -7,8 +7,6 @@ from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 # TEMPLATE_ADDED = "Property '{0}' was added with value: {1}"
 # TEMPLATE_REMOVED = "Property '{0}' was removed"
 # TEMPLATE_UPDATED = "Property '{0}' was updated. From {1} to {2}"
-
-
 # def make_format(node, path=[]):
 #     output = []
 #     for item in node:
@@ -17,15 +15,12 @@ from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 #         first_value = item.get('first_value')
 #         second_value = item.get('second_value')
 #         complex = item.get('nested')
-
 #         path.append(key)
-
 #         if type_node is DELETED:
 #             output.append(TEMPLATE_REMOVED.format('.'.join(path)))
 #         elif type_node is ADDED:
 #             output.append(TEMPLATE_ADDED.format
 #                           ('.'.join(path), get_string(second_value)))
-
 #         elif type_node is CHANGED:
 #             output.append(TEMPLATE_UPDATED.format
 #                           ('.'.join(path), get_string(first_value),
@@ -33,10 +28,7 @@ from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 #         elif type_node is NESTED:
 #             output.append(make_format(complex, path))
 #         path.pop()
-
 #     return '\n'.join(output)
-
-
 # def make_entry(type, key, first_value, second_value, nested):
 #     return {
 #         'type': type,
@@ -45,8 +37,6 @@ from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 #         'second_value': second_value,
 #         'nested': nested,
 #     }
-
-
 # def make_format(node, path=''):
 #     output = []
 #     for item in node:
@@ -67,23 +57,6 @@ from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 #     return '\n'.join(output)
 
 
-    #     path.append(key)
-
-    #     if type_node is DELETED:
-    #         output.append(TEMPLATE_REMOVED.format('.'.join(path)))
-    #     elif type_node is ADDED:
-    #         output.append(TEMPLATE_ADDED.format
-    #                       ('.'.join(path), get_string(second_value)))
-
-    #     elif type_node is CHANGED:
-    #         output.append(TEMPLATE_UPDATED.format
-    #                       ('.'.join(path), get_string(first_value),
-    #                        get_string(second_value)))
-    #     elif type_node is NESTED:
-    #         output.append(make_format(complex, path))
-    #     path.pop()
-
-    # return '\n'.join(output)
 def make_format(node, path=''):
     output = []
     for item in node:

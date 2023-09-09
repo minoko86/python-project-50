@@ -59,14 +59,12 @@ def make_format(node, depth=1):
 #     output = ['{']
 #     start_space = get_space(depth).get('start')
 #     end_space = get_space(depth).get('end')
-
 #     for item in node:
 #         type_node = item.get('type')
 #         key = item.get('key')
 #         first_value = item.get('first_value')
 #         second_value = item.get('second_value')
 #         complex = item.get('nested')
-
 #         if type_node is DELETED:
 #             output.append(TEMPLATE_STYLISH.format(
 #                 start_space, OLD, key,
@@ -96,7 +94,6 @@ def make_format(node, depth=1):
 #                 start_space, NEW, key,
 #                 get_string(second_value, depth + 1)
 #             ))
-
 #     output.append(end_space + '}')
 #     return '\n'.join(output)
 
