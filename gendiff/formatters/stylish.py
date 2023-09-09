@@ -46,11 +46,11 @@ def make_format(node, depth=1):
         else:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, OLD, item['key'],
-                get_string(item['value'], depth + 1)
+                get_string((item['value'][0]), depth + 1)
             ))
             output.append(TEMPLATE_STYLISH.format(
                 start_space, NEW, item['key'],
-                get_string(item['value'], depth + 1)
+                get_string((item['value'][1]), depth + 1)
             ))
 
     output.append(end_space + '}')
