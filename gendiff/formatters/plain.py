@@ -4,9 +4,9 @@ import json
 from gendiff.tree import DELETED, ADDED, NESTED, CHANGED
 
 
-TEMPLATE_ADDED = "Property '{0}' was added with value: {1}"
-TEMPLATE_REMOVED = "Property '{0}' was removed"
-TEMPLATE_UPDATED = "Property '{0}' was updated. From {1} to {2}"
+# TEMPLATE_ADDED = "Property '{0}' was added with value: {1}"
+# TEMPLATE_REMOVED = "Property '{0}' was removed"
+# TEMPLATE_UPDATED = "Property '{0}' was updated. From {1} to {2}"
 
 
 # def make_format(node, path=[]):
@@ -47,24 +47,26 @@ TEMPLATE_UPDATED = "Property '{0}' was updated. From {1} to {2}"
 #     }
 
 
-def make_format(node, path=''):
-    output = []
-    for item in node:
-        if item['type'] == DELETED:
-            output.append(f"Property '{path + item['key']}' was removed")
-        elif item['type'] == CHANGED and\
-                item['first_value'] != item['second_value']:
-            output.append(f"Property '{path + item['key']}' was updated. "
-                          f"From {get_string(item['first_value'])} to "
-                          f"{get_string(item['second_value'])}")
-        elif item['type'] == ADDED:
-            output.append(f"Property '{path + item['key']}'"
-                          f" was added with value: "
-                          f"{get_string(item['first_value'])}")
-        elif item['type'] == NESTED and item['nested']:
-            output.append(make_format(item['nested'],
-                                      path=path + item['key'] + '.'))
-    return '\n'.join(output)
+# def make_format(node, path=''):
+#     output = []
+#     for item in node:
+#         if item['type'] == DELETED:
+#             output.append(f"Property '{path + item['key']}' was removed")
+#         elif item['type'] == CHANGED and\
+#                 item['first_value'] != item['second_value']:
+#             output.append(f"Property '{path + item['key']}' was updated. "
+#                           f"From {get_string(item['first_value'])} to "
+#                           f"{get_string(item['second_value'])}")
+#         elif item['type'] == ADDED:
+#             output.append(f"Property '{path + item['key']}'"
+#                           f" was added with value: "
+#                           f"{get_string(item['second_value'])}")
+#         elif item['type'] == NESTED and item['nested']:
+#             output.append(make_format(item['nested'],
+#                                       path=path + item['key'] + '.'))
+#     return '\n'.join(output)
+
+
     #     path.append(key)
 
     #     if type_node is DELETED:
@@ -82,6 +84,24 @@ def make_format(node, path=''):
     #     path.pop()
 
     # return '\n'.join(output)
+def make_format(node, path=''):
+    output = []
+    for item in node:
+        if item['type'] == DELETED:
+            output.append(f"Property '{path + item['key']}' was removed")
+        elif item['type'] == CHANGED and\
+                item['value'][0] != item['value'][1]:
+            output.append(f"Property '{path + item['key']}' was updated. "
+                          f"From {get_string(item['value'][0])} to "
+                          f"{get_string(item['value'][1])}")
+        elif item['type'] == ADDED:
+            output.append(f"Property '{path + item['key']}'"
+                          f" was added with value: "
+                          f"{get_string(item['value'])}")
+        elif item['type'] == NESTED and item['value']:
+            output.append(make_format(item['value'],
+                                      path=path + item['key'] + '.'))
+    return '\n'.join(output)
 
 
 def get_string(value):
@@ -89,6 +109,8 @@ def get_string(value):
         result = f"'{value}'"
     elif isinstance(value, dict):
         result = '[complex value]'
+    elif value is None:
+        result = 'null'
     else:
         result = json.dumps(value)
 

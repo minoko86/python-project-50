@@ -17,44 +17,88 @@ def make_format(node, depth=1):
     end_space = get_space(depth).get('end')
 
     for item in node:
-        type_node = item.get('type')
-        key = item.get('key')
-        first_value = item.get('first_value')
-        second_value = item.get('second_value')
-        complex = item.get('nested')
+        # type_node = item.get('type')
+        # key = item.get('key')
+        # first_value = item.get('first_value')
+        # second_value = item.get('second_value')
+        # complex = item.get('nested')
 
-        if type_node is DELETED:
+        if item['type'] is DELETED:
             output.append(TEMPLATE_STYLISH.format(
-                start_space, OLD, key,
-                get_string(first_value, depth + 1)
+                start_space, OLD, item['key'],
+                get_string(item['value'][0], depth + 1)
             ))
-        elif type_node is ADDED:
+        elif item['type'] is ADDED:
             output.append(TEMPLATE_STYLISH.format(
-                start_space, NEW, key,
-                get_string(second_value, depth + 1)
+                start_space, NEW, item['key'],
+                get_string(item['value'], depth + 1)
             ))
-        elif type_node is UNCHANGED:
+        elif item['type'] is UNCHANGED:
             output.append(TEMPLATE_STYLISH.format(
-                start_space, NOCHANGE, key,
-                get_string(first_value, depth + 1)
+                start_space, NOCHANGE, item['key'],
+                get_string(item['value'], depth + 1)
             ))
-        elif type_node is NESTED:
+        elif item['type'] is NESTED:
             output.append(TEMPLATE_STYLISH.format(
-                start_space, NOCHANGE, key,
-                make_format(complex, depth + 1)
+                start_space, NOCHANGE, item['key'],
+                make_format(item['value'], depth + 1)
             ))
         else:
             output.append(TEMPLATE_STYLISH.format(
-                start_space, OLD, key,
-                get_string(first_value, depth + 1)
+                start_space, OLD, item['key'],
+                get_string(item['value'], depth + 1)
             ))
             output.append(TEMPLATE_STYLISH.format(
-                start_space, NEW, key,
-                get_string(second_value, depth + 1)
+                start_space, NEW, item['key'],
+                get_string(item['value'], depth + 1)
             ))
 
     output.append(end_space + '}')
     return '\n'.join(output)
+# def make_format(node, depth=1):
+#     output = ['{']
+#     start_space = get_space(depth).get('start')
+#     end_space = get_space(depth).get('end')
+
+#     for item in node:
+#         type_node = item.get('type')
+#         key = item.get('key')
+#         first_value = item.get('first_value')
+#         second_value = item.get('second_value')
+#         complex = item.get('nested')
+
+#         if type_node is DELETED:
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, OLD, key,
+#                 get_string(first_value, depth + 1)
+#             ))
+#         elif type_node is ADDED:
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, NEW, key,
+#                 get_string(second_value, depth + 1)
+#             ))
+#         elif type_node is UNCHANGED:
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, NOCHANGE, key,
+#                 get_string(first_value, depth + 1)
+#             ))
+#         elif type_node is NESTED:
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, NOCHANGE, key,
+#                 make_format(complex, depth + 1)
+#             ))
+#         else:
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, OLD, key,
+#                 get_string(first_value, depth + 1)
+#             ))
+#             output.append(TEMPLATE_STYLISH.format(
+#                 start_space, NEW, key,
+#                 get_string(second_value, depth + 1)
+#             ))
+
+#     output.append(end_space + '}')
+#     return '\n'.join(output)
 
 
 def get_space(depth):
