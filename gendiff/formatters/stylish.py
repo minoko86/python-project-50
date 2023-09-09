@@ -26,7 +26,7 @@ def make_format(node, depth=1):
         if item['type'] is DELETED:
             output.append(TEMPLATE_STYLISH.format(
                 start_space, OLD, item['key'],
-                get_string(item['value'][0], depth + 1)
+                get_string(item['value'], depth + 1)
             ))
         elif item['type'] is ADDED:
             output.append(TEMPLATE_STYLISH.format(
