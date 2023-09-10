@@ -24,10 +24,11 @@ def get_clean_diff(node):
             'type': item['type'],
             'key': item['key']
         }
-        if item['type'] == ADDED\
-                or item['type'] == DELETED\
+        if item['type'] == DELETED\
                 or item['type'] == UNCHANGED:
             clean_node['first_value'] = item['value']
+        if item['type'] == ADDED:
+            clean_node['second_value'] = item['value']
         if item['type'] == CHANGED:
             clean_node['value'] = item['value'][0]
             clean_node['value'] = item['value'][1]
