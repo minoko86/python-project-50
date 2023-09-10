@@ -38,11 +38,6 @@ def get_clean_diff(node):
         clean_diff.append(clean_node)
 
     return sort_diff(clean_diff)
-
-
-
-
-
 # def make_format(node):
 #     output = []
 #     for item in node:
@@ -50,12 +45,14 @@ def get_clean_diff(node):
 #             output.append({'key': item['key'], 'value': item['value']})
 #         elif item['type'] == CHANGED and\
 #                 item['value'][0] != item['value'][1]:
-#             output.append({'type': CHANGED, 'key': item['key'], 'value': item['value'][0]})
+#             output.append({'type': CHANGED,
+#  'key': item['key'], 'value': item['value'][0]})
 #             output.append({'key': item['key'], 'value': item['value'][1]})
 #         elif item['type'] == ADDED:
 #             output.append({'key': item['key'], 'value': item['value']})
 #         elif item['type'] == NESTED and item['value']:
-#             output.append(make_format({'key': item['key'], 'value': item['value']}))  
+#             output.append(make_format({'key': item['key'],
+#  'value': item['value']}))
 #     return output
 
 
