@@ -30,8 +30,8 @@ def get_clean_diff(node):
         if item['type'] == ADDED:
             clean_node['second_value'] = item['value']
         if item['type'] == CHANGED:
-            clean_node['value'] = item['value'][0]
-            clean_node['value'] = item['value'][1]
+            clean_node['first_value'] = item['value'][0]
+            clean_node['second_value'] = item['value'][1]
         if item['type'] == NESTED:
             clean_node['value'] = get_clean_diff(item['value'])
 
