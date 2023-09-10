@@ -17,26 +17,29 @@ def sort_diff(diff_tree):
     return sorted_dict
 
 
-def get_clean_diff(diff):
+def get_clean_diff(node):
     clean_diff = []
-    for dct in diff:
+    for item in node:
         clean_node = {
-            'type': dct['type'],
-            'key': dct['key']
+            'type': item['type'],
+            'key': item['key']
         }
-        if dct['type'] == ADDED\
-                or dct['type'] == DELETED\
-                or dct['type'] == UNCHANGED:
-            clean_node['value'] = dct['value']
-        if dct['type'] == CHANGED:
-            clean_node['value'] = dct['value'][0]
-            clean_node['value'] = dct['value'][1]
-        if dct['type'] == NESTED:
-            clean_node['value'] = get_clean_diff(dct['value'])
+        if item['type'] == ADDED\
+                or item['type'] == DELETED\
+                or item['type'] == UNCHANGED:
+            clean_node['value'] = item['value']
+        if item['type'] == CHANGED:
+            clean_node['value'] = item['value'][0]
+            clean_node['value'] = item['value'][1]
+        if item['type'] == NESTED:
+            clean_node['value'] = get_clean_diff(item['value'])
 
         clean_diff.append(clean_node)
 
     return sort_diff(clean_diff)
+
+
+
 
 
 # def make_format(node):
